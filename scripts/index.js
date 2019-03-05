@@ -139,23 +139,61 @@
 
 
 
-// Write a strMultiply function which takes two arguments:
-// str - the string to multiply
-// times - number of times to multiply
+// // Write a strMultiply function which takes two arguments:
+// // str - the string to multiply
+// // times - number of times to multiply
 
-function range(min, max) {
-    let arr = [];
-    for (let i = min; i < max; i++) {
-      arr.push(i);
-    }
-    return arr;
-}
+// function strMultiply(str, times) {
+//     let result = '';
+//     for (let i = 0; i < times; i++) {
+//         result += str;
+//     }
+//     console.log(result);   
+// }
+// strMultiply('abc', 5);
 
-function strMultiply(str, times) {
-    let result = '';
-    for (let i = 0; i < times; i++) {
-        result += str;
-    }
-    console.log(result);   
-}
-strMultiply('abc', 5);
+
+
+// Given an array of strings such as the array of names given in one of the "Good Job" problem, sort them by alphabetically order.
+
+const people = [
+    'Dom',
+    'Lyn',
+    'Kirk',
+    'Autumn',
+    'Trista',
+    'Jesslyn',
+    'Kevin',
+    'John',
+    'Eli',
+    'Juan',
+    'Robert',
+    'Keyur',
+    'Jason',
+    'Che',
+    'Ben'
+];
+
+const sortedPeople = people.sort();
+console.log(sortedPeople);
+
+const shortToLong = people.sort(function (a, b) {
+    return a.length - b.length;
+});
+console.log(shortToLong);
+
+
+// Sort the array by price
+
+const products = [
+    { name: 'Basketball', price: 12.00 },
+    { name: 'Tennis Racquet', price: 66.00 },
+    { name: 'Tennis Balls', price: 9.00 },
+    { name: 'Tennis Balls', price: 9.00 }
+];
+
+const sortedProducts = products.sort(function (a, b) {
+    return a.price - b.price;
+});
+
+console.log(sortedProducts);
